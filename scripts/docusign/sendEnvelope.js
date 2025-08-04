@@ -32,7 +32,9 @@ function getFileExtension(filename) {
 }
 
 async function getAccessToken() {
-  const privateKey = fs.readFileSync(process.env.DOCUSIGN_PRIVATE_KEY_PATH);
+  const privateKey = process.env.DOCUSIGN_PRIVATE_KEY?.replace(/\\n/g, "\n");
+
+  if (!privateKey) throw new Error("Private key not found in environment variables.");
 
   const jwtPayload = {
     iss: process.env.DOCUSIGN_INTEGRATOR_KEY,
