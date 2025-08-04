@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getEnvelopeStatus } from "@/scripts/docusign/docusignStatus"; // Adjust the import path
+import { getEnvelopeStatus } from "@/scripts/docusign/docusignStatus";
 
 export async function GET(req: NextRequest) {
   try {

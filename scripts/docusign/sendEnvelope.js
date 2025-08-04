@@ -35,7 +35,7 @@ function getFileExtension(filename) {
 
 // ✅ Generate JWT token for DocuSign API
 async function getAccessToken() {
-  const privateKey = "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAnyXtaeLx3ITEVYUj8D3rHHMAvXUFvqsFdMT3Y/fGSt01+PeR\n6o40xANFxHn2kI+qqXTxumsfw5LExoRFswYjxU2P2Pm319yqMZGjBohkoMX1bzZG\njqwWO+gumqIM5J6DCLoqyOkHQeMH83LgTN+vGc+KuEArovUQqh5+m9O7X7pMiYiM\nQyBvrzpp9ZalNm5VZJkj2F1Pqp2S1skcPyWlDwlWfCd+owbA3nKsreMz1GDp3+Mp\nkpWNKjqgMazUVxae2e2AUqQnsbBx1vu77uORns1ichWSDHE/OmlNbdJ7vS7sj8/h\nGMJzr47Zr4zJCYzieIn7y/J7tqSPEMg6X6y1aQIDAQABAoIBAA7fODWkJcZd6Mv2\nFmLpolok/A14TUphSG/+RQEEQzU1QUkr92iEE/W6OY+P9yTQrBnMSheJ0azQvw8v\nBqVhXj/ejOHxigbDwerCaYnffonQnewf1g2YkrZT7uD34j0N/AA5h2yBbDJxwQk0\ns7WzVHVUwemQY5OFk6JWGa49pb2e8J/OZR4KMhxIym4gDdzd91JTNw9ulxi3DcEf\nmnTh2U7RgnDFAHK6fy+ZDoQWP/DG2daV3o6diSSZm+ayrlqxYRpeNAQMMGQoGfQF\nAeIVETZ9eqLTtHxg0+GmPCg/1WpTlHQiQXR3XKkgWU3E9smTn3oXG5hMoo48om18\nsUPO41UCgYEA8JdJ0fcUoGJtsb2jCtkakAdIwiCmdheV6YLYgsfLyE7UVMW0/+9o\nYaTv/PJuRPhX05SoJKMbFuAtDvpndDxoz4YNZvRqCi01gMD2bAn1k1MBHArPlOeG\n1RSEdb0T42DAeP5fMTRIccPB0ufP6jEoUDhr1usOIIlcyPAaxXdKoDUCgYEAqVdP\nBdrrYFcI3MGVB1UsOCNS77Wo4xz05OBjBsbKpN3EnSCyi8E81TRBGze1roQi+l+Z\nkThq1ABjl/7oyK9rDTwuq0OcsfWddFC4tI7Pp4PFn5Vlo9qMiiB0dUVA5yuTodfo\ncX7C7JJbUfRWt4JBT1QbBardcbPZ0eO6BI6WjuUCgYBmKniIlvnFWcbnMXZpBuSG\nwPEerqrBfyaD8LJsZtecig0UqphADrQustHOgkxdMXBqQrhcRn8cabn4oFEKRRTk\n+zH5xFS7WZNcx5RdMKV+GENiWxznSKIzHfFZ5h7p8Y4KU0qtJFyXIt/N5e6erp1F\n44+3xj1Lh8lE8uELdarU+QKBgQCHY3uVldLsAoneXZM1+p3RAET1y8qMUgFl4BSs\nPVGVAI2KhrLZU5S8bPvEtAS404JXpQlVdsLKXslBo5cfpEg1m7FAUl08VsAdV9Bk\n420YZB0jmsFZgIkuggY6IDVk3Y06LzHzU8Kqe9UxL+YI78Yhk3/LRzGnD4EN80Et\nFYdAFQKBgQDfC31+rJH5p1XSK+L7g1eVub9ctQYerbjVt7VN+O3fYRGrqoNfk+AP\n+DydGhMpa37ht3RHHSjKE44jEwRMHDiijl7s7oShZ5jOkb8M4m7dPK81G21vUwK0\nGr1qJHDiXxVrJCKet6f0ArdHJZaO6O/bZlQtNRgD3FZQsjTT5WIJUA==\n-----END RSA PRIVATE KEY-----";
+  const privateKey = "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAk3WRt6nZp9YZ/zWBGBp1JzcSJUaZG7sFgBJCxdSIykoqk3Od\nXpg4n46ebITVGh3Hmsaq2o5+UQkAS3VLZLxBmy0RyyFnl2ZD0avogWcFtDhC9lGH\nUxTAUPsOpNQfzZwbHbkbyKXsy6ptgS6VlnqPFnjK4DQsWlshcnicK2p125xfkZoE\nM1KIU7TgKoj/kqAJpVxM4v5OCT3m1GlS4bqi5eAYGGE5JLizVIn2QH4rDFnj3KF3\nUAnIMdrH1yVRaJ7+6r0dKFPlYt5G0aP8qZCQrRQyAUhTPfkRMNyczSPdSgZKs2zg\nOVY/BnlO03Lv7PbxWfPjwxXPxTp++0TwtsSuAwIDAQABAoIBAAN7p3F7JZT9Tafl\nj6MOHO5MMrWGsV8iT8Lyq3kYyBJfJhpNhM4TMmMybzOI/6+aPHi/cJGxA/LOD5+4\nqYs7lyEfM2hk5ZmB5OAy+07zLANRwOMokdW4i8Jd676g9A9bPJi7IpjesnUtFWET\nxJzFUFPrjn81PEb2GBgoGSg9X4NMaRcr33mm/bd/WUE46rBSCt4sEnazbrf5DuHq\nzk/mwFbghNnlfy3jh/Hg94AE8eCkg9cIWOh5BNTdCNyHfqldQ66biyaX7Es1z9xA\nkwNEctaKe11ERrCgeNdoSIF2UghK1xJOB5wOFx5hluZQPQecNa2/Q/s6OEmTB9+E\nf0Gq6yECgYEAxq3olJO7sOABKI4owIhCWHq+9OSFYpB47yz80MqiuD5/0ga2PjHu\nYviuw3HsvIllqYJLVrqIq7C/Nio6zuGYBl2PwmbbWWXoKNxePaPh7itCMG4mE+rB\nHWVFnTX5YzTIzL02xWpl1LCv3NpqG3gJKcpdyfascrhaOz6pU0D4/2cCgYEAvgCj\nxLRZbTNcRmZvebWSvwW++ZpFv+lC12j2uTVYtCRB48SLtkEPd9DKbtcYEFDyKePl\nrqutN1CCekOtySpt/d1YuP8kuHOu1DC8RqfWo1XxcWjbeWM7rbJEU0/rDnzzgmcl\nQCtEj/Zp+kHxH+SEY1nZSaz1BRrhWSUQPdipJwUCgYBo977WqMrUIzVZeOoc9qCe\n4JL9DbNPJOdP7iPQKA8aaqLbkwI8D+NT1PF4fztFTQ4yJY2qT7kfhK0xb9RMMzI/\nwrTOT8t6CvZCiFMeG/SlAaPhtIBXq4LGBhhme/q7qEqiqSFD4ffVDFiNxbOjuaKV\nur4ckz//CFlbzbpmKwCi5wKBgQCMXO6fH1i9Gmc9vuj1cdTh93246WZDuy/c8Lbr\n5eQM2Igwmn9X+cJSklUqAw7M5u+vUKPaIQuKxJhPeHYHGag+Feo4aIyZEyUBrqs4\nSz9+VLxUOtGAYHWzAPIG1hBhGJ/QIyDawdwZukFaVqKqG+hNeQ/TpMkxp0T41S+l\ncMytfQKBgBEXvMDymCc6TcEpLFf2N7LvTZqip9C20rVA3gtcNs+OFVx9FlZeuXes\nMN4KsElE0/MUyUwlC9bjmN2Z7VV2mgTAvJQwi2ADTl8ADoTIGaVqm19WZVlnhLg5\ncPhHPuDTu0w0eCUJvz/7lWcX0ULag8Fpp0ICacSW+TFJvKUznhDj\n-----END RSA PRIVATE KEY-----";
 
   if (!privateKey) throw new Error("Private key not found in environment variables.");
 
@@ -100,7 +100,7 @@ async function sendEnvelope(signerName, signerEmail, fileUrl, documentName, file
 
   try {
     const accessToken = await getAccessToken();
-    console.log("✅ Access Token retrieved");
+    console.log("Access Token retrieved");
 
     const documentBase64 = await fetchFileAsBase64(fileUrl);
     const extension =
@@ -141,9 +141,8 @@ async function sendEnvelope(signerName, signerEmail, fileUrl, documentName, file
       },
       status: "sent",
 
-      // ✅ ADDED: Webhook support
       eventNotification: {
-        url: `${process.env.DOCUSIGN_WEBHOOK_URL}`, // e.g., https://yourdomain.com/api/docusign-webhook
+        url: `${process.env.DOCUSIGN_WEBHOOK_URL}`,
         loggingEnabled: true,
         requireAcknowledgment: true,
         useSoapInterface: false,
