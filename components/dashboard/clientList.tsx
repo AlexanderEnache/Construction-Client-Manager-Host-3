@@ -21,9 +21,15 @@ interface ClientListProps {
 export function ClientList({ clients, className }: ClientListProps) {
   if (!clients || clients.length === 0) {
     return (
-      <Card className={cn("p-6 text-center text-muted-foreground", className)}>
-        <p>No clients found.</p>
-      </Card>
+    <div className="flex flex-col items-center justify-center space-y-4">
+      {/* <Card className={"p-6 text-center text-muted-foreground"}>
+        <p>You have no clients</p>
+      </Card> */}
+
+      <Link href={`/add-client/`}>
+        <Button>Click to add Clients</Button>
+      </Link>
+    </div>
     );
   }
 
