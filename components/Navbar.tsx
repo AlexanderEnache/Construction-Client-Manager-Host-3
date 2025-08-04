@@ -6,13 +6,13 @@ import { createClient } from "@/lib/supabase/client";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const router = useRouter();
+  // const router = useRouter();
 
-  const handleLogout = async () => {
-    const supabase = createClient();
-    await supabase.auth.signOut();
-    router.push("/auth/login"); // Redirect to login page after logout
-  };
+  // const handleLogout = async () => {
+  //   const supabase = createClient();
+  //   await supabase.auth.signOut();
+  //   router.push("/auth/login"); // Redirect to login page after logout
+  // };
 
   const navItems = [
     { name: "All Proposals", href: "/dashboard" },
@@ -42,12 +42,12 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <button
+          {/* <button
             onClick={handleLogout}
             className="text-sm font-medium text-gray-600 hover:text-red-600 dark:text-gray-300 dark:hover:text-red-400 transition-colors"
           >
             Logout
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>
