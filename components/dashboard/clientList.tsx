@@ -29,7 +29,12 @@ export function ClientList({ clients, className }: ClientListProps) {
 
   return (
     <div className={cn("flex flex-col", className)}>
+    <div className="flex items-center justify-between">
       <h1 className="text-3xl font-semibold">My Clients</h1>
+      <Link href={`/add-client/`}>
+        <Button>Add Client</Button>
+      </Link>
+    </div>
       <br/>
       {clients.map((client, index) => (
         <Card
