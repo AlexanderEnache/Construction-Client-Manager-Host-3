@@ -132,9 +132,10 @@ export function EditProposalForm({ proposalId }: EditProposalFormProps) {
     if (error) {
       console.error("Update error:", error);
       alert(`Update failed: ${error.message}`);
-    } else {
-      router.push("/view-clients");
-    }
+    } 
+    // else {
+    //   router.push("/view-clients");
+    // }
   };
 
   return (
