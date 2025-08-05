@@ -22,10 +22,9 @@ To get started you will first have to
 
 ENV Variables
 
-  # Update these with your Supabase details from your project settings > API
-  # https://app.supabase.com/project/_/settings/api
   NEXT_PUBLIC_SUPABASE_URL=https://zndgsndlaojdddbxabus.supabase.co
-           NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpuZGdzbmRsYW9qZGRkYnhhYnVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQwNTgxNTQsImV4cCI6MjA2OTYzNDE1NH0.BDbtaN6oy3OqJ6tWn3CC_DUQRZf29hrJVki5KkWh96Q
+
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpuZGdzbmRsYW9qZGRkYnhhYnVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQwNTgxNTQsImV4cCI6MjA2OTYzNDE1NH0.BDbtaN6oy3OqJ6tWn3CC_DUQRZf29hrJVki5KkWh96Q
   
   DOCUSIGN_WEBHOOK_URL=https://construction-client-manager-host-3.vercel.app/api/docusign-webhook
   # .env.local
